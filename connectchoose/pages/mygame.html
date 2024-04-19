@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>ConnectChoose Game</title>
+    <link rel="stylesheet" href="../mycss.css">
+    
+    <script src="../myscript.js"></script>
+</head>
+
+<body>
+    
+    <h1>CONNECT CHOOSE</h1>
+    <h2 id="winner"></h2>
+    <div id="board"></div>
+
+    <script>
+        // Function to retrieve token colors from local storage and update token colors
+        function updateTokenColors() {
+            var redColor = localStorage.getItem("redTokenColor") || "red";
+            var yellowColor = localStorage.getItem("yellowTokenColor") || "yellow";
+
+            var redPieces = document.querySelectorAll(".red-piece");
+            redPieces.forEach(function(piece) {
+                piece.style.backgroundColor = redColor;
+            });
+
+            var yellowPieces = document.querySelectorAll(".yellow-piece");
+            yellowPieces.forEach(function(piece) {
+                piece.style.backgroundColor = yellowColor;
+            });
+        }
+
+        // Call updateTokenColors when the page loads
+        window.onload = function() {
+            updateTokenColors();
+            setGame(); // Set up the game board after updating token colors
+        };
+    </script>
+</body>
+</html>

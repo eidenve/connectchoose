@@ -1,0 +1,106 @@
+body {
+    color: #33b249;
+    font-family: "IBM Plex Sans", "Courier New", monospace;
+    background-color: azure;
+    text-align: center;
+}
+
+button {
+    background-color: #33b249;
+    border-radius: 15.5px;
+    height: 50px;
+    font-size: 26px;
+    text-align: center;
+    font-family: "IBM Plex Sans", "Courier New", monospace;
+    width: 220px;
+    height: 60px;
+    vertical-align: middle;
+    margin: 0 auto;
+    cursor: pointer;  
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    float: left;
+    margin-right: 16px;
+
+}
+
+button:hover {
+    background-color: #3e8e41;
+  
+  }
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+button::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+h1 { 
+    font-family: "IBM Plex Sans", "Courier New", monospace;
+    font-weight: bolder;
+    font-size: 80px;
+    text-align: center;
+  
+
+}
+
+.buttons {
+    height: 200px;
+    position: relative;
+  }
+  
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#board {
+  height: 540px;
+  width: 630px;
+  background-color: blue;
+  border: 10px solid navy;
+  
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tile {
+  height: 70px;
+  width: 70px;
+  margin: 5px;
+
+  /* Circle */
+  background-color: white;
+  border-radius: 50%;
+  border: 5px solid navy;
+}
+
+.red-piece {
+  background-color: red;
+}
+
+.yellow-piece {
+  background-color: yellow;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectChoose Settings</title>
+    <link rel="stylesheet" href="../mycss.css">
+</head>
+<body>
+
+    <h1>CONNECT CHOOSE</h1>
+    
+    <div id="mainarea">
+        <h2>Token Colors</h2>
+        <label for="redTokenColor">Red Token Color:</label>
+        <select id="redTokenColor">
+            <option value="blue">Red</option>
+            <option value="red">Blue</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="purple">Purple</option>
+        </select><br><br>
+
+        <label for="yellowTokenColor">Yellow Token Color:</label>
+        <select id="yellowTokenColor">
+            <option value="blue">Yellow</option>
+            <option value="red">Red</option>
+            <option value="yellow">Blue</option>
+            <option value="green">Green</option>
+            <option value="purple">Purple</option>
+        </select><br><br>
+    </div>
+    <div class="buttons">
+        <div class="center">
+            <button onclick="saveColors()">Save</button> <!-- Save button -->
+            <br><br><br><br>
+            <button onclick="document.location='../index.html'">Home</button>
+            
+        </div>
+    </div>
+
+    <script src="myscript.js"></script>
+    <script>
+        // Function to save selected colors to local storage
+        function saveColors() {
+            var redColor = document.getElementById("redTokenColor").value;
+            var yellowColor = document.getElementById("yellowTokenColor").value;
+
+            localStorage.setItem("redTokenColor", redColor);
+            localStorage.setItem("yellowTokenColor", yellowColor);
+        }
+    </script>
+
+</body>
+</html>
